@@ -1,9 +1,9 @@
 # Generics Lab
 
-Authors: (_TODO: fill in names here!_)
+Authors: Finn Rowles, Raymond Chu, Colton Benson
 
 ## Resources
 
-*   (_TODO: fill in resources here!_)
-*   ...
-*   ...
+*   Credits to Peter-Michael Osera for instructions and assistance on the lab.
+*   The IDE used for this project was VSCode.  
+*   Project was tested using Java 17. 
