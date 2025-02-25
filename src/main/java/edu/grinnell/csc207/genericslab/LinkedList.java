@@ -20,14 +20,66 @@ public class LinkedList<T> {
         this.first = null;
     }
 
-    public void intersperse(T sep){
+    /**
+     * 
+     * @param sep is the value to be added between each node
+     */
+    public void intersperse(T sep) {
         Node<T> curr = first;
-        while(curr != null){
-            Node<T> temp = curr.next;
-            curr.next = new Node<T>(sep, temp);
-            curr = curr.next.next;
+        if (curr == null) {
+
+        } else {
+            while (curr.next != null) {
+                Node<T> temp = new Node<T>(sep, curr.next);
+                curr.next = temp;
+                curr = temp.next;
+            }
         }
     }
+
+    /**
+     * Because T can be any type, and there is no method
+     * that can determine whether an object is greater than
+     * or less than another object for all objects, maximum
+     * can not be written.
+     * 
+     * @return the maximum of the list
+     */
+    public T maximum() {
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * Because T can be any type, there is no guarantee that
+     * the elements stored by the nodes can be converted to an
+     * understandable String. However, all objects can be converted into
+     * some type of String if they are added with the first element of the addition
+     * being a string, and thus this function is still allowed. 
+     * 
+     * @return the String of list elements
+     */
+    public String toString() {
+        String ret = "";
+        Node<T> cur = first;
+        while (cur != null) {
+            ret = ret + cur.value;
+            cur = cur.next;
+        }
+        return ret;
+    }
+
+    /**
+     * Because T can be any type, and there is no method
+     * that can determine whether an object is greater than
+     * or less than another object for all objects, insertionSort
+     * can not be written as there is way to guarantee comparisons work.
+     * 
+     * @return error
+     */
+    public String insertionSort() {
+        throw new UnsupportedOperationException();
+    }
+
     /**
      * Adds <code>value</code> to the end of the list
      * 
